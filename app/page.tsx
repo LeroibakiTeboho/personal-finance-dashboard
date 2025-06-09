@@ -4,7 +4,7 @@ import ProtectedRoute from "@/components/ProtectedRoute";
 
 export default function Home() {
   return (
-    <ProtectedRoute>
+    // <ProtectedRoute>
       <div>
         <h1 className="text-2xl font-bold mb-6">Financial Overview</h1>
         <SummaryCards />
@@ -12,6 +12,6 @@ export default function Home() {
           <DashboardCharts />
         </div>
       </div>
-    </ProtectedRoute>
+    // </ProtectedRoute>
   );
 }

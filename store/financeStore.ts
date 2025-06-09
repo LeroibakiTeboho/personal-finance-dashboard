@@ -1,5 +1,4 @@
 import { atom } from "jotai";
-import { Transaction, Budget, SavingsGoal } from "@/types";
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 

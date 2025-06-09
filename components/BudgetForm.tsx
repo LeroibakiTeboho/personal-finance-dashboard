@@ -20,7 +20,7 @@ export default function BudgetForm({ onClose }: { onClose: () => void }) {
     addBudget({
       category: formData.category,
       limit: parseFloat(formData.limit),
-      spent: 0, // Initialize spent to 0
+      spent: 0,
     });
     
     onClose();
