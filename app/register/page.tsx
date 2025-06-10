@@ -1,5 +1,6 @@
 'use client';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 
@@ -114,7 +115,7 @@ export default function RegisterPage() {
             <div className="text-center mt-4">
               <p className="text-gray-600 dark:text-gray-300">
                 Already have an account? 
-                <a href="/" className="text-blue-500 ml-2 hover:underline">Sign in</a>
+                <Link href="/" className="text-blue-500 ml-2 hover:underline">Sign in</Link>
               </p>
             </div>
           </form>
