@@ -92,7 +92,7 @@ export default function Home() {
             
             <div className="text-center mt-4">
               <p className="text-gray-600 dark:text-gray-300">
-                Don't have an account? 
+                Don&apos;t have an account? 
                 <a href="/register" className="text-blue-500 ml-2 hover:underline">Sign up</a>
               </p>
             </div>
