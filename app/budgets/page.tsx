@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { useFinanceStore } from '@/store/financeStore';
 import BudgetCard from '@/components/BudgetCard';
-// import BudgetForm from '@/components/BudgetForm';
+import BudgetForm from '@/components/BudgetForm';
 
 export default function BudgetsPage() {
   const [showForm, setShowForm] = useState(false);
@@ -48,7 +48,7 @@ export default function BudgetsPage() {
                 &times;
               </button>
             </div>
-            {/* <BudgetForm onClose={() => setShowForm(false)} /> */}
+            <BudgetForm onClose={() => setShowForm(false)} />
           </div>
         </div>
       )}

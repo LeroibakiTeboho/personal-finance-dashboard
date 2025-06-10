@@ -9,7 +9,7 @@ import { AuthProvider } from "@/context/AuthContext";
 import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
-const publicRoutes = ["/login", "/register"];
+const publicRoutes = ["/", "/register"];
 
 // export const metadata: Metadata = {
 //   title: "Create Next App",

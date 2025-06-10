@@ -9,7 +9,7 @@ import {
 } from '@heroicons/react/24/outline';
 
 const navigation = [
-  { name: 'Dashboard', href: '/', icon: HomeIcon },
+  { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
   { name: 'Transactions', href: '/transactions', icon: CreditCardIcon },
   { name: 'Budgets', href: '/budgets', icon: ScaleIcon },
   { name: 'Savings Goals', href: '/savings', icon: PlusCircleIcon },
@@ -89,7 +89,7 @@ export default function Sidebar() {
           <button
             onClick={() => {
               localStorage.removeItem('user');
-              window.location.href = '/login';
+              window.location.href = '/';
             }}
             className="flex items-center w-full px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-slate-700 mt-4"
           >

@@ -57,6 +57,7 @@ export default function DashboardCharts() {
       <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow">
         <h3 className="font-semibold mb-4">Net Worth Over Time</h3>
         <ResponsiveContainer width="100%" height={300}>
+          
           <AreaChart data={netWorthData}>
             <CartesianGrid strokeDasharray="3 3" stroke={gridColor} />
             <XAxis dataKey="month" stroke={textColor} />
@@ -64,7 +65,16 @@ export default function DashboardCharts() {
             <Tooltip />
             <Area type="monotone" dataKey="net" fill="#93C5FD" stroke="#3B82F6" />
           </AreaChart>
+          
         </ResponsiveContainer>
+ <Tooltip 
+          contentStyle={{
+            backgroundColor: theme === 'dark' ? '#1E293B' : '#FFFFFF',
+            borderColor: theme === 'dark' ? '#334155' : '#E5E7EB'
+          }}
+          itemStyle={{ color: textColor }}
+        />
+       
       </div>
 
        {/* Expense Categories */}
