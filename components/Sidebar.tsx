@@ -5,8 +5,10 @@ import { useState, useEffect } from 'react';
 import { 
   ChartBarIcon, CogIcon, CreditCardIcon, HomeIcon, 
   PlusCircleIcon, ScaleIcon, XMarkIcon, Bars3Icon,
-  ArrowLeftOnRectangleIcon
+  ArrowLeftOnRectangleIcon, CurrencyDollarIcon
 } from '@heroicons/react/24/outline';
+import Link from 'next/link';
+
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
@@ -39,11 +41,12 @@ export default function Sidebar() {
     <>
       {/* Mobile menu button - only visible on mobile */}
       {isMobile && !isOpen && (
+        // ${
+        //     theme === 'dark' ? 'bg-slate-800' : 'bg-white'
+        //   }
         <button 
           onClick={() => setIsOpen(true)}
-          className={`fixed top-4 left-4 z-30 p-2 rounded-lg ${
-            theme === 'dark' ? 'bg-slate-800' : 'bg-white'
-          } shadow-md`}
+          className={`fixed top-4 left-4 z-30 p-2 rounded-lg  shadow-md bg-slate-800`}
         >
           <Bars3Icon className="h-6 w-6" />
         </button>
@@ -51,14 +54,16 @@ export default function Sidebar() {
 
       {/* Sidebar */}
       <div 
-        className={`fixed inset-y-0 left-0 w-64 p-4 ${
-          theme === 'dark' ? 'bg-slate-800' : 'bg-white'
-        } shadow-lg z-20 transform transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 w-64 p-4 bg-slate-800 shadow-lg z-20 transform transition-transform duration-300 ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } lg:translate-x-0`}
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-200 dark:border-slate-700">
-          <h1 className="text-xl font-bold text-blue-500">FinDash</h1>
+          <Link href={'/'} className='flex items-center justify-center gap-2'>
+          <CurrencyDollarIcon className='w-7 text-blue-500' />
+            <h1 className="text-xl font-bold text-blue-500">MoneyMap</h1>
+          </Link>
+        
           {isMobile && (
             <button 
               onClick={() => setIsOpen(false)}

@@ -10,8 +10,11 @@ const COLORS = ['#3B82F6', '#10B981', '#EF4444', '#F59E0B', '#8B5CF6'];
 export default function DashboardCharts() {
   const { theme } = useTheme();
   const { savingsGoals, transactions } = useFinanceStore();
-  const textColor = theme === 'dark' ? '#F8FAFC' : '#111827';
-  const gridColor = theme === 'dark' ? '#334155' : '#E5E7EB';
+  // const textColor = theme === 'dark' ? '#F8FAFC' : '#111827';
+  // const gridColor = theme === 'dark' ? '#334155' : '#E5E7EB';
+
+  const textColor = theme === '#F8FAFC' ? '#F8FAFC' : '#F8FAFC';
+  const gridColor = theme === '#334155' ? '#334155' : '#334155';
 
   // Calculate expense categories from transactions
   const expenses = transactions.filter(t => t.type === 'expense');
@@ -52,7 +55,7 @@ export default function DashboardCharts() {
   ];
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 ">
       {/* Net Worth Chart */}
       <div className="bg-white dark:bg-slate-800 p-4 rounded-xl shadow">
         <h3 className="font-semibold mb-4">Net Worth Over Time</h3>
@@ -67,13 +70,7 @@ export default function DashboardCharts() {
           </AreaChart>
           
         </ResponsiveContainer>
- <Tooltip 
-          contentStyle={{
-            backgroundColor: theme === 'dark' ? '#1E293B' : '#FFFFFF',
-            borderColor: theme === 'dark' ? '#334155' : '#E5E7EB'
-          }}
-          itemStyle={{ color: textColor }}
-        />
+
        
       </div>
 
